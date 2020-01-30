@@ -5,6 +5,9 @@ export default EmberObject.extend({
   content: '',
   info: '',
   size: computed("content", function () {
+    if(this.get("content").length !== 0) {
+      this.set("info", "Note modifiée")
+    }
     return this.get("MAX") - this.get("content").length;
   }),
   style: computed("content", function () {

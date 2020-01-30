@@ -1,0 +1,17 @@
+{{outlet}}
+<div class="card bg-info text-white text-center">
+  <div class="card-body">
+    <h1>Services</h1>
+    <div class="alert alert-info text-left">
+      Choisissez les éléments à inclure
+    </div>
+    {{#each model.services as | service |}}
+      <div class="btn btn-secondary btn-lg btn-block font-weight-bold">
+        <span>{{service.name}}</span>
+        <span>{{service.price}} €</span>
+      </div>
+    {{/each}}
+    <hr>
+    Total :
+  </div>
+</div>
