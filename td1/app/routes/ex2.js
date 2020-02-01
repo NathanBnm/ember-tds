@@ -7,19 +7,19 @@ export default Route.extend({
       {
         "name": "Web Development",
         "price": 300,
-        "active":true
+        "active": true
       },{
         "name": "Design",
         "price": 400,
-        "active":false
+        "active": false
       },{
         "name": "Integration",
         "price": 250,
-        "active":false
+        "active": false
       },{
         "name": "Formation",
         "price": 220,
-        "active":false
+        "active": false
       }
     ]});
   }

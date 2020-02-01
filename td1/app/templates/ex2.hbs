@@ -3,15 +3,31 @@
   <div class="card-body">
     <h1>Services</h1>
     <div class="alert alert-info text-left">
-      Choisissez les éléments à inclure
+      Choisissez les éléments à inclure<br>
+      <strong>
+        {{#if model.countActive}}
+          {{plural model.countActive "élément sélectionné"  "élément sélectionné" "éléments sélectionnés"}}
+        {{/if}}
+      </strong>
     </div>
     {{#each model.services as | service |}}
-      <div class="btn btn-secondary btn-lg btn-block font-weight-bold">
-        <span>{{service.name}}</span>
-        <span>{{service.price}} €</span>
+      <div class="card bg-secondary border-info" onclick={{action "toggleActive" service}}>
+        <div class="card-body btn {{if service.active "btn-success" "btn-secondary"}} font-weight-bold">
+          <div class="float-left">{{service.name}}</div>
+          <div class="float-right">{{format-currency service.price "€"}}</div>
+        </div>
       </div>
     {{/each}}
-    <hr>
-    Total :
+    <hr class="bg-white">
+    <div class="card bg-info border-info font-weight-bold">
+      <div class="card-body">
+        <div class="float-left">Total :</div>
+        <div class="float-right">
+          {{#if model.sumActive}}
+            {{format-currency model.sumActive "€"}}
+          {{/if}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
