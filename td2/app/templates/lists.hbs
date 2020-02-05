@@ -1,0 +1,33 @@
+<div class="card bg-info mx-auto w-75 mb-5 mt-5">
+  <div class="card-body">
+    <h1 class="text-white">Sélectionnez vos produits</h1>
+    <form>
+      <div class="row">
+        <div class="form-group col-5">
+          <label for="availableItems">Produits disponibles :</label>
+          <MultiSelect class="form-control"
+                       name="availableItems"
+                       @elements={{model.availableItems}}
+                       @selectedIds={{model.availableItemsIds_}}/>
+        </div>
+        <div class="col-2">
+          <br><br>
+          <button type="button" class="btn btn-block btn-primary" title="Sélectionner"><i class="fa fa-step-forward"></i></button>
+          <button type="button" class="btn btn-block btn-primary" title="Tout sélectionner"><i class="fa fa-fast-forward"></i></button>
+          <button type="button" class="btn btn-block btn-primary" title="Désélectionner"><i class="fa fa-step-backward"></i></button>
+          <button type="button" class="btn btn-block btn-primary" title="Tout déselectionner"><i class="fa fa-fast-backward"></i></button>
+        </div>
+        <div class="form-group col-5">
+          <label for="includedItems">Produits sélectionnés :</label>
+          <MultiSelect class="form-control"
+                       name="includedItems"
+                       @elements={{model.includedItems}}
+                       @selectedIds={{model.includedItemsIds_}}/>
+        </div>
+      </div>
+    </form>
+    <p>x produits sélectionnés</p>
+    <button type="button" class="btn btn-block btn-primary text-right">Étape suivante <i class="fa fa-arrow-circle-right"></i></button>
+  </div>
+</div>
+{{outlet}}
