@@ -21,6 +21,13 @@ export default Route.extend({
         "price": 220,
         "active": false
       }
+    ],
+    codes: [
+      {
+        "B22": 0.05,
+        "AZ": 0.01,
+        "UBOAT": 0.02
+      }
     ]});
   }
 });
