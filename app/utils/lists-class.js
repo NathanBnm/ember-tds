@@ -1,10 +1,6 @@
 import EmberObject, { computed } from '@ember/object';
 
 export default EmberObject.extend({
-  availableItems: [],
-  includedItems: [],
-  availableItemsIds_: [],
-  includedItemsIds_: [],
   availableItems_: computed("availableItemsIds_.[]", function () {
       let items = [];
       this.get('availableItemsIds_').forEach(availableItem => {

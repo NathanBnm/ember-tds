@@ -6,7 +6,7 @@ let items = [{
   "url": "https://tutorialzine.com/2018/01/what-every-developer-should-know-about-cryptocurrency",
   "title": "What Every Developer Should Know About Cryptocurrency",
   "image": "https://tutorialzine.com/media/2018/01/everything-you-should-know-cryptocurrency.png"
-},
+  },
   {
     "id": "2",
     "url": "https://tutorialzine.com/2018/01/15-interesting-javascript-and-css-libraries-for-january-2018",
@@ -43,15 +43,15 @@ let items = [{
     "title": "The Languages and Frameworks You Should Learn in 2017",
     "image": "https://tutorialzine.com/media/2016/12/the-languages-and-frameworks-you-should-learn-in-2017.png"
   }
-]
+];
 
 export default Route.extend({
   model() {
     return Lists.create({
       availableItems: items,
       includedItems: [],
-      availableItemsIds: [],
-      includedItemsIds: []
+      availableItemsIds_: [],
+      includedItemsIds_: []
     })
   }
 });
