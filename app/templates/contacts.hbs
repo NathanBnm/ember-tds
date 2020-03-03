@@ -1,2 +1,45 @@
-<h1>Contacts</h1>
-{{outlet}}
+<div class="container">
+  <div id="contact">
+    <div class="card border-primary">
+      <div class="card-header bg-primary text-white">Contacts</div>
+      <div class="card-body">
+        <div class="form-group">
+          <input type="text" placeholder="Filtrer..." class="form-control">
+        </div>
+        <table class="table table-striped" id="lstContact">
+          <tbody>
+          {{#each model.contacts as |contact|}}
+            <tr class="animate-repeat">
+              <td>{{contact.lastName}}</td>
+              <td>{{contact.firstName}}</td>
+              <td>{{contact.email}}</td>
+              <td>[
+                <LinkTo @route="contacts.edit" @model={{contact}}  title="Modifier">...</LinkTo>
+                ] [<a href="" title="Supprimer">X</a>]
+              </td>
+            </tr>
+          {{else}}
+            <tr>
+              <td colspan="4">Aucun contact</td>
+            </tr>
+          {{/each}}
+          </tbody>
+          <tfoot>
+          <tr>
+            <td colspan="4">
+              <LinkTo @route="contacts.add" id="add" class="btn btn-primary">Ajouter...</LinkTo>
+              <a id="add" href="" class="btn btn-danger">
+                Annuler la suppression
+              </a>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+      {{outlet}}
+      <div class="card-footer">
+        X contacts trouvés
+      </div>
+    </div>
+  </div>
+</div>

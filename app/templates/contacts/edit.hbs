@@ -1,0 +1,11 @@
+<fieldset data-ng-show="edit" class="container form-group form-inline">
+  <legend>Modifier un contact</legend>
+  <form name="frmContact">
+    <Input class="form-control" type="text" @value={{model.lastName}}  placeholder="Entrez un nom..." required/>
+    <Input class="form-control" type="text" @value={{model.firstName}} placeholder="Prénom..."/>
+    <Input class="form-control" type="email" @value={{model.email}} placeholder="Adresse email..." required/>
+    <input type="submit" value="Valider" class="btn btn-primary">
+    <input type="button" value="Annuler" class="btn btn-primary">
+  </form>
+</fieldset>
+{{outlet}}
