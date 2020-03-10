@@ -1,16 +1,18 @@
 <div class="ui container">
-  <h1 class="ui header">
-    <i class="table icon"></i>
-    <span class="content">
+  <LinkTo @route="developers">
+    <h1 class="ui header">
+      <i class="table icon"></i>
+      <span class="content">
       models/Developer
       <span class="sub header">Administration de données</span>
     </span>
-  </h1>
+    </h1>
+  </LinkTo>
   <div class="ui segment">
-    <a class="ui orange button">
+    <LinkTo @route="developers.new" class="ui orange button">
       <i class="icon plus"></i>
       Ajouter un nouveau models/Developer…
-    </a>
+    </LinkTo>
     <table class="ui selectable single line table">
       <thead>
       <tr>
@@ -19,19 +21,27 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td></td>
-        <td class="right aligned">
-          <a class="circular ui basic icon button">
-            <i class="icon edit"></i>
-          </a>
-          <a class="circular ui inverted red icon button">
-            <i class="icon times"></i>
-          </a>
-        </td>
-      </tr>
+      {{#each model as |developer|}}
+        <tr>
+          <td>{{developer.identity}}</td>
+          <td class="right aligned">
+            <LinkTo class="circular ui basic icon button" title="Modifier" @route="developers.edit"
+                    @model={{developer}}>
+              <i class="icon edit"></i>
+            </LinkTo>
+            <LinkTo class="circular ui inverted red icon button" title="Supprimer" @route="developers.delete"
+                    @model={{developer}}>
+              <i class="icon times"></i>
+            </LinkTo>
+          </td>
+        </tr>
+      {{else}}
+        <tr>
+          <td colspan="2">Aucun développeur</td>
+        </tr>
+      {{/each}}
       </tbody>
     </table>
   </div>
+  {{outlet}}
 </div>
-{{outlet}}
