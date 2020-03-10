@@ -35,6 +35,10 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.locationType = 'none';
 
+    ENV.contentSecurityPolicy = {
+      'connect-src': "'self' http://127.0.0.1:8080"
+    };
+
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
