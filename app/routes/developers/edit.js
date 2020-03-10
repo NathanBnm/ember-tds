@@ -7,6 +7,9 @@ export default Route.extend({
         developer.set('identity', identity);
         this.transitionTo('developers');
       });
+    },
+    cancel: function () {
+      this.transitionTo('developers');
     }
   }
 });

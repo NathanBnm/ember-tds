@@ -10,6 +10,9 @@ export default Route.extend({
       this.get('store').createRecord('developer', {
         identity: identity
       }).save().then(() => this.transitionTo('developers'));
+    },
+    cancel: function () {
+      this.transitionTo('developers');
     }
   }
 });
