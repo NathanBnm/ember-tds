@@ -2,9 +2,9 @@
   <h1 class="ui header">
     <i class="table icon"></i>
     <span class="content">
-        models/Project
-        <span class="sub header">Administration de données</span>
-      </span>
+      models/Project
+      <span class="sub header">Administration de données</span>
+    </span>
   </h1>
 </LinkTo>
 <div class="ui segment">
@@ -30,6 +30,9 @@
         <td>{{moment-format project.startDate "MM-DD-YYYY"}}</td>
         <td>{{moment-format project.dueDate "MM-DD-YYYY"}}</td>
         <td class="right aligned">
+          <LinkTo class="circular ui basic icon button" title="Visualiser" @route="project" @model={{project.id}}>
+            <i class="icon eye"></i>
+          </LinkTo>
           <LinkTo class="circular ui basic icon button" title="Modifier" @route="projects.edit" @model={{project}}>
             <i class="icon edit"></i>
           </LinkTo>

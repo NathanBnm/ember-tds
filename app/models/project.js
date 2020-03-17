@@ -6,5 +6,6 @@ export default Model.extend({
   name: DS.attr('string'),
   description: DS.attr('string'),
   startDate: DS.attr('utc'),
-  dueDate: DS.attr('utc')
+  dueDate: DS.attr('utc'),
+  stories: DS.hasMany('story')
 });
