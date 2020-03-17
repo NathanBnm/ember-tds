@@ -3,5 +3,6 @@ import DS from 'ember-data';
 const {Model} = DS;
 
 export default Model.extend({
-  title: DS.attr('string')
+  title: DS.attr('string'),
+  color: DS.attr('string')
 });
