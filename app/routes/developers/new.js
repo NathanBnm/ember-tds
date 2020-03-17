@@ -6,10 +6,8 @@ export default Route.extend({
     return EmberObject.create();
   },
   actions: {
-    save: function (identity) {
-      this.get('store').createRecord('developer', {
-        identity: identity
-      }).save().then(() => this.transitionTo('developers'));
+    save: function (developer) {
+      this.get('store').createRecord('developer', developer).save().then(() => this.transitionTo('developers'));
     },
     cancel: function () {
       this.transitionTo('developers');

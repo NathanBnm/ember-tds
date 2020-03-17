@@ -10,14 +10,14 @@
 <form class="ui form" method="POST">
   <div class="field">
     <label>Identité</label>
-    <Input type="text" name="identity" placeholder="Prénom NOM" @value={{this.identity}}/>
+    <Input type="text" name="identity" placeholder="Prénom NOM" @value={{model.identity}}/>
   </div>
   <div class="ui segment">
-    <button class="ui labeled green icon button" {{action "save" this.identity}}>
+    <button class="ui labeled green icon button" {{action "save" model}}>
       <i class="check icon"></i>
       Valider
     </button>
-    <button class="ui labeled icon button"  {{action "cancel"}}>
+    <button class="ui labeled icon button" {{action "cancel"}}>
       <i class="times circle outline icon"></i>
       Annuler
     </button>

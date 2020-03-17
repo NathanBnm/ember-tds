@@ -1,1 +1,30 @@
+<div class="ui icon message">
+  <i class="file icon"></i>
+  <div class="content">
+    <div class="header">
+      {{model.name}}
+    </div>
+    <p>Ajout d'une story dans le projet</p>
+  </div>
+</div>
+<form class="ui form" method="POST">
+  <div class="field">
+    <label>Code</label>
+    <Input type="text" name="code" placeholder="Code de la story" @value={{this.code}}/>
+  </div>
+  <div class="field">
+    <label>Descriptif</label>
+    <Textarea name="description" placeholder="Descriptif de la story" @value={{this.description}}/>
+  </div>
+  <div class="ui segment">
+    <button class="ui labeled green icon button">
+      <i class="check icon"></i>
+      Enregistrer
+    </button>
+    <button class="ui labeled icon button">
+      <i class="times circle outline icon"></i>
+      Annuler
+    </button>
+  </div>
+</form>
 {{outlet}}

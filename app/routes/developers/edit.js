@@ -1,12 +1,12 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
+  model({developer_id}) {
+    return this.get('store').find('project', developer_id);
+  },
   actions: {
-    edit: function (developer, identity) {
-      this.get('store').findRecord('developer', developer.id, {reload: true}).then((developer) => {
-        developer.set('identity', identity);
-        this.transitionTo('developers');
-      });
+    edit: function (developer) {
+      developer.save().then(() => this.transitionTo('developers'));
     },
     cancel: function () {
       this.transitionTo('developers');

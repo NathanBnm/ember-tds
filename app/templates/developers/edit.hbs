@@ -10,10 +10,10 @@
 <form class="ui form" method="POST">
   <div class="field">
     <label>Identité</label>
-    <Input type="text" name="identity" placeholder="Prénom NOM" @value={{this.identity}} value={{model.identity}}/>
+    <Input type="text" name="identity" placeholder="Prénom NOM" @value={{model.identity}} value={{model.identity}}/>
   </div>
   <div class="ui segment">
-    <button class="ui labeled green icon button" {{action "edit" model this.identity}}>
+    <button class="ui labeled green icon button" {{action "edit" model}}>
       <i class="check icon"></i>
       Valider
     </button>
