@@ -14,30 +14,30 @@
   </LinkTo>
   <table class="ui selectable single line table">
     <thead>
-    <tr>
-      <th>Identité</th>
-      <th></th>
-    </tr>
+      <tr>
+        <th>Identité</th>
+        <th></th>
+      </tr>
     </thead>
     <tbody>
-    {{#each model as |developer|}}
-      <tr>
-        <td>{{developer.identity}}</td>
-        <td class="right aligned">
-          <LinkTo class="circular ui basic icon button" title="Modifier" @route="developers.edit" @model={{developer}}>
-            <i class="icon edit"></i>
-          </LinkTo>
-          <LinkTo class="circular ui inverted red icon button" title="Supprimer" @route="developers.delete"
-                  @model={{developer}}>
-            <i class="icon times"></i>
-          </LinkTo>
-        </td>
-      </tr>
-    {{else}}
-      <tr>
-        <td colspan="2" class="center aligned">Aucun développeur</td>
-      </tr>
-    {{/each}}
+      {{#each model as |developer|}}
+        <tr>
+          <td>{{developer.identity}}</td>
+          <td class="right aligned">
+            <LinkTo class="circular ui basic icon button" title="Modifier" @route="developers.edit" @model={{developer}}>
+              <i class="icon edit"></i>
+            </LinkTo>
+            <LinkTo class="circular ui inverted red icon button" title="Supprimer" @route="developers.delete"
+                    @model={{developer}}>
+              <i class="icon times"></i>
+            </LinkTo>
+          </td>
+        </tr>
+      {{else}}
+        <tr>
+          <td colspan="2" class="center aligned">Aucun développeur</td>
+        </tr>
+      {{/each}}
     </tbody>
   </table>
 </div>

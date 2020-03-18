@@ -37,7 +37,7 @@
       <i class="dropdown icon"></i>
       <div class="menu">
         {{#each model.developers as |developer|}}
-          <div data-value="{{map-value mapper developer}}" class="item">
+          <div data-value={{map-value mapper developer}} class="item">
             {{developer.identity}}
           </div>
         {{/each}}

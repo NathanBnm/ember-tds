@@ -35,7 +35,7 @@
         <div class="default text">Étiquettes</div>
         <div class="menu">
           {{#each model.story.tags as |tag|}}
-            <div data-value="{{map-value mapper tag}}" class="item">
+            <div data-value={{map-value mapper tag}} class="item">
               {{tag.title}}
             </div>
           {{/each}}
@@ -56,7 +56,7 @@
             {{/each}}
           </div>
         {{/ui-dropdown}}
-        <div class="ui button" {{action "saveTag" model.tag}}>Nouvelle étiquette</div>
+        <button class="ui button" {{action "saveTag" model.tag}}>Nouvelle étiquette</button>
       </div>
     </div>
   </div>
