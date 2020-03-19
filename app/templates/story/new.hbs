@@ -31,11 +31,13 @@
   </div>
   <div class="two fields">
     <div class="field">
-      {{#ui-dropdown class="multiple selection" selected=model.story.tags onChange=(action (mut model.story.tags)) as |execute mapper|}}
+      {{#ui-dropdown class="fluid multiple selection" selected=model.tags onChange=(action (mut model.tags)) as |execute mapper|}}
+        <i class="dropdown icon"></i>
         <div class="default text">Étiquettes</div>
         <div class="menu">
-          {{#each model.story.tags as |tag|}}
-            <div data-value={{map-value mapper tag}} class="item">
+          {{#each model.tags as |tag|}}
+            <div data-value="{{map-value mapper tag}}" class="item">
+              <i class="ui {{tag.color}} empty circular label"></i>
               {{tag.title}}
             </div>
           {{/each}}

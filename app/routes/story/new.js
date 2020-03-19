@@ -10,7 +10,8 @@ export default Route.extend(
         project: this.get('store').findRecord('project', project_id),
         story: EmberObject.create(),
         tag: EmberObject.create(),
-        developers: this.get('store').findAll('developer')
+        developers: this.get('store').findAll('developer'),
+        tags: this.get('store').findAll('tag')
       });
     },
     actions: {
