@@ -18,7 +18,6 @@ export default Route.extend(
     actions: {
       saveStory: function(data, project) {
         data.set('project', project);
-        console.log(data);
         this.get('store').createRecord('story', data).save().then(()=>this.transitionTo('projects'));
       },
       saveTag: function(data) {
