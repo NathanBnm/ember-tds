@@ -25,18 +25,18 @@
                 <div class="sub header">
                   {{story.description}}
                   {{#each story.tags as |tag|}}
-                    <div class="ui label">{{tag.title}}</div>
+                    <div class="ui {{tag.color}} label">{{tag.title}}</div>
                   {{/each}}
                 </div>
               </div>
             </h4>
           </td>
-          <td>
+          <td class="right aligned">
             <div class="ui left labeled button" tabindex="0">
               <a class="ui basic right pointing label">
                 {{story.developer.identity}}
               </a>
-              <LinkTo class="ui button" @route="developer.edit" @model={{story.developer}}>
+              <LinkTo class="ui button" @route="developers.edit" @model={{story.developer}}>
                 Modifier
               </LinkTo>
             </div>
