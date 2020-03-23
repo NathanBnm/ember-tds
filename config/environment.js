@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'td4',
+    modulePrefix: 'td5',
     environment,
     rootURL: '/',
     locationType: 'auto',

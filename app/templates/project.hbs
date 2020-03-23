@@ -9,7 +9,7 @@
 </LinkTo>
 <div class="ui segment">
   <h2>Stories</h2>
-  <LinkTo class="ui button" @route="story.new" @model={{model.project.id}}>
+  <LinkTo class="ui button" @route="stories.new" @model={{model.project.id}}>
     <i class="icon plus"></i>
     Ajouter une story au projet…
   </LinkTo>
@@ -36,9 +36,9 @@
               <a class="ui basic right pointing label">
                 {{story.developer.identity}}
               </a>
-              <LinkTo class="ui button" @route="developers.edit" @model={{story.developer}}>
-                <i class="user icon"></i>
-                Modifier…
+              <LinkTo class="ui button" @route="stories.edit" @model={{story.id}}>
+                <i class="folder open icon"></i>
+                Ouvrir…
               </LinkTo>
             </div>
           </td>

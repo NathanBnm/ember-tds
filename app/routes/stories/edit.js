@@ -4,23 +4,21 @@ import RSVP from 'rsvp';
 
 export default Route.extend(
   {
-    model({project_id}) {
+    model({story_id}) {
       return RSVP.hash({
         colors: ['black', 'blue', 'green', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'positive', 'negative'],
-        project: this.get('store').findRecord('project', project_id),
-        story: EmberObject.create(),
+        story: this.get('store').findRecord('story', story_id),
         tag: EmberObject.create(),
         developers: this.get('store').findAll('developer'),
         tags: this.get('store').findAll('tag')
-      });
+      })
     },
     actions: {
-      saveStory: function (data, project) {
-        data.set('project', project);
-        this.get('store').createRecord('story', data).save().then(()=>this.transitionTo('projects'));
+      saveStory: function (story) {
+        story.save().then(() => this.transitionTo('project', story.get('project').get('id')));
       },
-      saveTag: function (data) {
-        this.get('store').createRecord('tag', data).save();
+      saveTag: function (tag) {
+        this.get('store').createRecord('tag', tag).save();
       }
     }
   }
