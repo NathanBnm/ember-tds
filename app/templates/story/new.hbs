@@ -31,7 +31,7 @@
   </div>
   <div class="two fields">
     <div class="field">
-      {{#ui-dropdown class="fluid multiple selection" selected=model.tags onChange=(action (mut model.tags)) as |execute mapper|}}
+      {{#ui-dropdown class="fluid multiple selection" selected=model.story.tags onChange=(action (mut model.story.tags)) as |execute mapper|}}
         <i class="dropdown icon"></i>
         <div class="default text">Étiquettes</div>
         <div class="menu">
