@@ -7,9 +7,6 @@ export default Route.extend({
   actions: {
     edit: function (developer) {
       developer.save().then(() => this.transitionTo('developers'));
-    },
-    cancel: function () {
-      this.transitionTo('developers');
     }
   }
 });

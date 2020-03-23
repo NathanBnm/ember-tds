@@ -11,9 +11,6 @@ export default Route.extend({
   actions: {
     edit: function (project) {
       project.save().then(() => this.transitionTo('projects'));
-    },
-    cancel: function () {
-      this.transitionTo('projects');
     }
   }
 });

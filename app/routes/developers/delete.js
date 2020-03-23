@@ -8,9 +8,6 @@ export default Route.extend({
           this.transitionTo('developers');
         });
       });
-    },
-    cancel: function () {
-      this.transitionTo('developers');
     }
   }
 });

@@ -12,9 +12,6 @@ export default Route.extend({
   actions: {
     save: function (project) {
       this.get('store').createRecord('project', project).save().then(() => this.transitionTo('projects'));
-    },
-    cancel: function () {
-      this.transitionTo('projects');
     }
   }
 });
