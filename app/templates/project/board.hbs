@@ -15,10 +15,18 @@
       <i class="folder open icon"></i>
       Ouvrir…
     </button>
-    <button class="ui labeled icon button">
+    {{#ui-dropdown class="ui floating dropdown labeled icon button" onChange=(action (mut model.steps)) as |execute mapper|}}
       <i class="arrow circle right icon"></i>
-      Aller à l'étape
-    </button>
+      <span class="default-text">Aller à l'étape</span>
+      <div class="menu">
+        {{#each model.steps as |step|}}
+          <div class="item" data-value={{map-value mapper step}}>
+            <i class="step forward icon"></i>
+            {{step.title}}
+          </div>
+        {{/each}}
+      </div>
+    {{/ui-dropdown}}
     <button class="ui red button">
       <i class="times icon"></i>
       Supprimer
