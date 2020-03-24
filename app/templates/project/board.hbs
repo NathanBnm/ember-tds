@@ -1,1 +1,45 @@
+<div class="ui header">
+  <i class="icon calendar alternate"></i>
+  <div class="content">
+    Tableau de bord
+    <div class="sub header">Avancement des stories du projet</div>
+  </div>
+</div>
+
+<div class="ui segments">
+  <div class="ui green tertiary segment">
+    <p>Avec la story sélectionnée : <strong>Nom de la story</strong></p>
+  </div>
+  <div class="ui segment ">
+    <button class="ui button">
+      <i class="folder open icon"></i>
+      Ouvrir…
+    </button>
+    <button class="ui labeled icon button">
+      <i class="arrow circle right icon"></i>
+      Aller à l'étape
+    </button>
+    <button class="ui red button">
+      <i class="times icon"></i>
+      Supprimer
+    </button>
+  </div>
+</div>
+
+<div class="ui grid">
+  <div class="three column row">
+    {{#each model.steps as |step| }}
+      <div class="column">
+        <div class="ui segments">
+          <div class="ui secondary segment">
+            <p><i class="step forward icon"></i>{{step.title}}</p>
+          </div>
+          <div class="ui segment">
+            Stories
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
 {{outlet}}
