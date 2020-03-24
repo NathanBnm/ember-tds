@@ -1,4 +1,4 @@
-# TD5 : Agile project management application made with EmberJS
+# TD5 : Agile project management app made with EmberJS
 
 [![Build Status](https://travis-ci.org/NathanBnm/ember-tds.svg?branch=td5)](https://travis-ci.org/NathanBnm/ember-tds)
 [![Heroku](http://heroku-badge.herokuapp.com/?app=ember-td5-nb&root=/)](https://ember-td5-nb.herokuapp.com/)
