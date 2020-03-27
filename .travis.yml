@@ -14,8 +14,8 @@ addons:
   
 cache:
   directories:
-    - "node_modules"
-
+    - /home/travis/build/NathanBnm/ember-tds/node_modules
+    
 env:
   global:
     - JOBS=1
