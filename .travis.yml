@@ -5,7 +5,7 @@ language: node_js
 node_js:
   - "lts/*"
 
-sudo: false
+sudo: required
 
 dist: trusty
 
