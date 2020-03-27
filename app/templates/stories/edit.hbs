@@ -36,7 +36,7 @@
         <div class="default text">Étiquettes</div>
         <div class="menu">
           {{#each model.tags as |tag|}}
-            <div data-value="{{map-value mapper tag}}" class="item">
+            <div data-value={{map-value mapper tag}} class="item">
               <i class="ui {{tag.color}} empty circular label"></i>
               {{tag.title}}
             </div>
