@@ -13,8 +13,7 @@ addons:
   chrome: stable
   
 cache:
-  directories:
-    - /home/travis/build/NathanBnm/ember-tds/node_modules
+  npm: false
     
 env:
   global:
