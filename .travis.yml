@@ -11,6 +11,10 @@ dist: trusty
 
 addons:
   chrome: stable
+  
+cache:
+  directories:
+    - "node_modules"
     
 env:
   global:
