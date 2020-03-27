@@ -1,20 +1,23 @@
 ---
+
 language: node_js
+
 node_js:
   - "lts/*"
 
 sudo: false
+
 dist: trusty
 
 addons:
   chrome: stable
   
 cache:
-  npm: false
+  directories:
+    - "node_modules"
 
 env:
   global:
-    # See https://git.io/vdao3 for details.
     - JOBS=1
 
 script:
