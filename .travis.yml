@@ -11,9 +11,6 @@ dist: trusty
 
 addons:
   chrome: stable
-  
-cache:
-  npm: false
     
 env:
   global:
