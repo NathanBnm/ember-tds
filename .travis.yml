@@ -11,7 +11,7 @@ addons:
   
 cache:
   directories:
-    - $HOME/.npm
+    - "node_modules"
 
 env:
   global:
