@@ -10,8 +10,7 @@ addons:
   chrome: stable
   
 cache:
-  directories:
-    - "node_modules"
+  npm: false
 
 env:
   global:
