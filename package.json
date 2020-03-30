@@ -52,5 +52,8 @@
   },
   "engines": {
     "node": "8.* || >= 10.*"
+  },
+  "dependencies": {
+    "ember-local-storage": "^1.7.2"
   }
 }

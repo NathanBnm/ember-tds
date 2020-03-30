@@ -1,3 +1,9 @@
+import Adapter from 'ember-local-storage/adapters/local';
+
+export default Adapter.extend({
+  modelNamespace: 'contact-app'
+});
+/*
 import DS from 'ember-data';
 import {pluralize} from 'ember-inflector';
 
@@ -25,3 +31,4 @@ var Adapater = DS.RESTAdapter.extend({
 });
 
 export default Adapater;
+*/
