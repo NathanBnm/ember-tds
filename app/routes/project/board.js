@@ -9,6 +9,16 @@ export default Route.extend(
         project: this.get('store').find('project', project_id),
         steps: this.get('store').findAll('step').then(steps => steps.sortBy('order'))
       })
+    },
+    actions: {
+      moveToStep: function (story_id, step) {
+        this.get('store').findRecord('story', story_id).then((story) => {
+          this.set(story, 'step', step);
+          story.save().then(() => {
+            this.refresh();
+          })
+        })
+      }
     }
   }
 );

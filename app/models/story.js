@@ -8,5 +8,6 @@ export default Model.extend({
   project: DS.belongsTo('project'),
   tags: DS.hasMany('tag'),
   step: DS.belongsTo('step'),
-  developer: DS.belongsTo('developer')
+  developer: DS.belongsTo('developer'),
+  active: DS.attr('boolean')
 });

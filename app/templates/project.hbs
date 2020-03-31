@@ -28,7 +28,7 @@
     </thead>
     <tbody>
       {{#each model.stories as |story|}}
-        <tr>
+        <tr {{action "select" story}}>
           <td>
             <h4 class="ui header">
               <i class="file icon"></i>

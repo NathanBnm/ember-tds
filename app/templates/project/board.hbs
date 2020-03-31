@@ -43,7 +43,12 @@
             <p><i class="step forward icon"></i>{{step.title}}</p>
           </div>
           <div class="ui segment">
-            Stories
+            {{#draggable-dropzone content=step dropped="moveToStep" class="column"}}
+              {{#each step.stories as |story|}}
+                {{#draggable-item content=story onClick="activate" class="ui segment" activeClass="green inverted"}}
+                {{/draggable-item}}
+              {{/each}}
+            {{/draggable-dropzone}}
           </div>
         </div>
       </div>
