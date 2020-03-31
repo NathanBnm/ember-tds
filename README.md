@@ -1,7 +1,8 @@
 # Application de gestion de projet agile avec EmberJS
 
 [![Build Status](https://travis-ci.org/NathanBnm/ember-tds.svg?branch=evaluation)](https://travis-ci.org/NathanBnm/ember-tds)
-[![Heroku](http://heroku-badge.herokuapp.com/?app=ember-evaluation-nb&root=/projects)](https://ember-evaluation-nb.herokuapp.com/projects)
+
+Création d'une application de gestion de projet agile avec EmberJS dans le cadre des cours de client riche de DUT Informatique à l'IUT Grand Ouest Normandie.
 
 ## Fonctionnalités
 
