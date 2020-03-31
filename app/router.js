@@ -25,6 +25,12 @@ Router.map(function () {
     this.route('new', {path: '/new/:project_id'});
     this.route('edit', {path: '/edit/:story_id'});
   });
+
+  this.route('steps', function() {
+    this.route('new');
+    this.route('edit', {path: '/edit/:step_id'});
+    this.route('delete', {path: '/delete/:step_id'});
+  });
 });
 
 export default Router;

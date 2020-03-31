@@ -1,0 +1,30 @@
+<div class="ui icon message">
+  <i class="table icon"></i>
+  <div class="content">
+    <div class="header">
+      models\Steps
+    </div>
+    <p>Création d'un nouvel objet.</p>
+  </div>
+</div>
+<form class="ui form" method="POST">
+  <div class="field">
+    <label>Nom de l'étape</label>
+    <Input type="text" name="title" placeholder="Nom de l'étape" @value={{model.title}}/>
+  </div>
+  <div class="field">
+    <label>Ordre</label>
+    <Input type="number" name="order" placeholder="Ordre de l'étape" @value={{model.order}}/>
+  </div>
+  <div class="ui segment">
+    <button class="ui labeled green icon button" {{action "save" model}}>
+      <i class="check icon"></i>
+      Valider
+    </button>
+    <LinkTo class="ui labeled icon button" @route="steps">
+      <i class="times circle outline icon"></i>
+      Annuler
+    </LinkTo>
+  </div>
+</form>
+{{outlet}}

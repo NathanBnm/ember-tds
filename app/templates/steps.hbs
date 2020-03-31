@@ -1,0 +1,46 @@
+<LinkTo @route="steps">
+  <h1 class="ui header">
+    <i class="table icon"></i>
+    <span class="content">
+      models/Step
+      <span class="sub header">Administration de données</span>
+    </span>
+  </h1>
+</LinkTo>
+<div class="ui segment">
+  <LinkTo @route="steps.new" class="ui orange button">
+    <i class="icon plus"></i>
+    Ajouter un nouveau models/Step…
+  </LinkTo>
+  <table class="ui selectable single line table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Ordre</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |step|}}
+        <tr>
+          <td>{{step.title}}</td>
+          <td>{{step.order}}</td>
+          <td class="right aligned">
+            <LinkTo class="circular ui basic icon button" title="Modifier" @route="steps.edit" @model={{step}}>
+              <i class="icon edit"></i>
+            </LinkTo>
+            <LinkTo class="circular ui inverted red icon button" title="Supprimer" @route="steps.delete"
+                    @model={{step}}>
+              <i class="icon times"></i>
+            </LinkTo>
+          </td>
+        </tr>
+      {{else}}
+        <tr>
+          <td colspan="3" class="center aligned">Aucune étape</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+{{outlet}}
